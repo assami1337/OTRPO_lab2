@@ -13,4 +13,4 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fronta
 
 faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
-print(f"Найдено {len(faces)} лицо(а) на изображении.")
+print(f"Найдено {len(faces)} лицо(а) на изображении")
