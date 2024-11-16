@@ -1,12 +1,11 @@
 FROM python:3.9-slim
 
-RUN dpkg --add-architecture arm64 && \
-    apt-get update && apt-get install -y \
-    libsm6:arm64 \
-    libxext6:arm64 \
-    libxrender-dev:arm64 \
-    libgl1-mesa-glx:arm64 \
-    libglib2.0-0:arm64 \
+RUN apt-get update && apt-get install -y \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
